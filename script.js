@@ -92,6 +92,7 @@ insertNode(data,pos)
         this.size++;
 }
 }
+}
 class Node{
     constructor(data)
     {
