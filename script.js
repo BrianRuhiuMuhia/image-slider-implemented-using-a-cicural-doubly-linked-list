@@ -1,9 +1,9 @@
 const images=[
-    "C:/Users/Nyabura/Desktop/image-slider with doubly linked list implementation/images/a.jpg",
-    "C:/Users/Nyabura/Desktop/image-slider with doubly linked list implementation/images/b.jpg",
-    "C:/Users/Nyabura/Desktop/image-slider with doubly linked list implementation/images/c.jpg",
-    "C:/Users/Nyabura/Desktop/image-slider with doubly linked list implementation/images/d.jpg",
-    "C:/Users/Nyabura/Desktop/image-slider with doubly linked list implementation/images/e.jpg"
+    "./images/a.jpg",
+    "./images/b.jpg",
+    "./images/c.jpg",
+    "./images/d.jpg",
+    "./images/e.jpg"
    ]
    
 class LinkedList{
