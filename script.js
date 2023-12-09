@@ -105,7 +105,6 @@ const ll=new LinkedList()
 images.forEach((image)=>{
     ll.prepend(image)
 })
-ll.printNodes()
 const prev=document.querySelector(".previous")
 const next=document.querySelector(".next")
 const img=document.querySelector("img")
@@ -123,3 +122,56 @@ function changeImage()
 {
     img.setAttribute("src",curr.data)
 }
+const imagesSection=document.querySelector(".image-section")
+const reverseBtn=document.querySelector(".reverse")
+function createImage(src)
+{
+const imageTag=document.createElement("img")
+imageTag.setAttribute("src",src)
+imagesSection.appendChild(imageTag)
+
+}
+function createImages()
+{
+    let curr=ll.head
+    while(curr)
+    {
+        createImage(curr.data)
+        if(curr===ll.tail)
+        {
+        
+            break
+        }
+        curr=curr.next
+    }
+    const br=document.createElement("br")
+    imagesSection.appendChild(br)
+}
+function reverse(list) {
+    let curr = list.head;
+    let prev = null;
+
+    do {
+        let next = curr.next;
+        curr.next = prev;
+        curr.prev = next;
+        prev = curr;
+        curr = next;
+    } while (curr !== list.head)
+
+   
+    list.tail = list.head;
+    list.head = prev;
+
+    
+    list.head.prev = list.tail;
+    list.tail.next = list.head;
+
+    console.log(list);
+}
+
+createImages()
+reverseBtn.addEventListener("click",()=>{
+    reverse(ll)
+    createImages()
+})

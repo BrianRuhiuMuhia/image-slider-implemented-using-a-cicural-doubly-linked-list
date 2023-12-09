@@ -2,3 +2,7 @@ img{
     width:400px;
     height:400px;
 }
+.image-section img{
+    width:100px;
+    height:100px;
+}
